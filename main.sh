@@ -3,7 +3,7 @@
 #first argument specifies number of cores available for usage (8)
 
 #Trimming
-./scripts/1_trimming.sh /home/sarka/BTU_39/\!\!Users/SARKA/miRNA_kits/GEO_submission_200428/Samples/ 8
+./scripts/1_trimming.sh [directory_with_fastq_samples] 8
 
 #Filtering
 ./scripts/2_filtering.sh 8
