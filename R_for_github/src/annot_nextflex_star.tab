@@ -1,0 +1,7 @@
+	Kit	Sample_source	Replicate	PCR_bias	ligation_bias
+NEXTflex_miRXplore_1	NEXTflex	miRXplore	1	yes	yes
+NEXTflex_miRXplore_2	NEXTflex	miRXplore	2	yes	yes
+UMINEXTflex_miRXplore_1	NEXTflex	miRXplore	1	no	yes
+UMINEXTflex_miRXplore_2	NEXTflex	miRXplore	2	no	yes
+PredictedNEXTflex_miRXplore_1	NEXTflex	miRXplore	1	no	no
+PredictedNEXTflex_miRXplore_2	NEXTflex	miRXplore	2	no	no
