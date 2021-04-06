@@ -1,7 +1,0 @@
-	Kit	Sample_source	Replicate	PCR_bias	ligation_bias
-QIAseq_miRXplore_1	QIAseq	miRXplore	1	yes	yes
-QIAseq_miRXplore_2	QIAseq	miRXplore	2	yes	yes
-UMIQIAseq_miRXplore_1	QIAseq	miRXplore	1	no	yes
-UMIQIAseq_miRXplore_2	QIAseq	miRXplore	2	no	yes
-PredictedQIAseq_miRXplore_1	QIAseq	miRXplore	1	no	no
-PredictedQIAseq_miRXplore_2	QIAseq	miRXplore	2	no	no
