@@ -1,0 +1,13 @@
+Sample	Kit
+QIAseq_12bp_1	QIAseq_12
+QIAseq_12bp_2	QIAseq_12
+NEXTflex_8bp_1	NEXTflex_8
+NEXTflex_8bp_2	NEXTflex_8
+QIASeq_non_dedup_1	QIAseq
+QIAseq_non_dedup_2	QIAseq
+NEXTflex_non_dedup_1	NEXTflex
+NEXTflex_non_dedup_2	NEXTflex
+QIAseq_8bp_1	QIAseq_8
+QIAseq_8bp_2	QIAseq_8
+QIAseq_10bp_1	QIAseq_10
+QIAseq_10bp_2	QIAseq_10
