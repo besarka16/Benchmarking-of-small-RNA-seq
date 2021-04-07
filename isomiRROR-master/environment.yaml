@@ -1,0 +1,9 @@
+name: IsomiRROR
+channels:
+  - conda-forge
+  - bioconda
+  - r
+dependencies:
+  - python=3.6
+  - snakemake=4.8.0
+  - r=3.4.1

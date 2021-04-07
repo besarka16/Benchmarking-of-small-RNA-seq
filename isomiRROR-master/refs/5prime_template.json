@@ -1,0 +1,552 @@
+{
+  "name": "root",
+  "base": "None",
+  "sequence": "",
+  "is_template": true,
+  "children": [
+    {
+      "name": "A",
+      "base": "A",
+      "sequence": "",
+      "is_template": false,
+      "children": [
+        {
+          "name": "AA",
+          "base": "A",
+          "sequence": "",
+          "is_template": false,
+          "children": [
+            {
+              "name": "AAA",
+              "base": "A",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "TAA",
+              "base": "T",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "GAA",
+              "base": "G",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "CAA",
+              "base": "C",
+              "sequence": "",
+              "is_template": false
+            }
+          ]
+        },
+        {
+          "name": "TA",
+          "base": "T",
+          "sequence": "",
+          "is_template": false,
+          "children": [
+            {
+              "name": "ATA",
+              "base": "A",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "TTA",
+              "base": "T",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "GTA",
+              "base": "G",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "CTA",
+              "base": "C",
+              "sequence": "",
+              "is_template": false
+            }
+          ]
+        },
+        {
+          "name": "GA",
+          "base": "G",
+          "sequence": "",
+          "is_template": false,
+          "children": [
+            {
+              "name": "AGA",
+              "base": "A",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "TGA",
+              "base": "T",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "GGA",
+              "base": "G",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "CGA",
+              "base": "C",
+              "sequence": "",
+              "is_template": false
+            }
+          ]
+        },
+        {
+          "name": "CA",
+          "base": "C",
+          "sequence": "",
+          "is_template": false,
+          "children": [
+            {
+              "name": "ACA",
+              "base": "A",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "TCA",
+              "base": "T",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "GCA",
+              "base": "G",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "CCA",
+              "base": "C",
+              "sequence": "",
+              "is_template": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "T",
+      "base": "T",
+      "sequence": "",
+      "is_template": false,
+      "children": [
+        {
+          "name": "AT",
+          "base": "A",
+          "sequence": "",
+          "is_template": false,
+          "children": [
+            {
+              "name": "AAT",
+              "base": "A",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "TAT",
+              "base": "T",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "GAT",
+              "base": "G",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "CAT",
+              "base": "C",
+              "sequence": "",
+              "is_template": false
+            }
+          ]
+        },
+        {
+          "name": "TT",
+          "base": "T",
+          "sequence": "",
+          "is_template": false,
+          "children": [
+            {
+              "name": "ATT",
+              "base": "A",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "TTT",
+              "base": "T",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "GTT",
+              "base": "G",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "CTT",
+              "base": "C",
+              "sequence": "",
+              "is_template": false
+            }
+          ]
+        },
+        {
+          "name": "GT",
+          "base": "G",
+          "sequence": "",
+          "is_template": false,
+          "children": [
+            {
+              "name": "AGT",
+              "base": "A",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "TGT",
+              "base": "T",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "GGT",
+              "base": "G",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "CGT",
+              "base": "C",
+              "sequence": "",
+              "is_template": false
+            }
+          ]
+        },
+        {
+          "name": "CT",
+          "base": "C",
+          "sequence": "",
+          "is_template": false,
+          "children": [
+            {
+              "name": "ACT",
+              "base": "A",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "TCT",
+              "base": "T",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "GCT",
+              "base": "G",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "CCT",
+              "base": "C",
+              "sequence": "",
+              "is_template": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "G",
+      "base": "G",
+      "sequence": "",
+      "is_template": false,
+      "children": [
+        {
+          "name": "AG",
+          "base": "A",
+          "sequence": "",
+          "is_template": false,
+          "children": [
+            {
+              "name": "AAG",
+              "base": "A",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "TAG",
+              "base": "T",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "GAG",
+              "base": "G",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "CAG",
+              "base": "C",
+              "sequence": "",
+              "is_template": false
+            }
+          ]
+        },
+        {
+          "name": "TG",
+          "base": "T",
+          "sequence": "",
+          "is_template": false,
+          "children": [
+            {
+              "name": "ATG",
+              "base": "A",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "TTG",
+              "base": "T",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "GTG",
+              "base": "G",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "CTG",
+              "base": "C",
+              "sequence": "",
+              "is_template": false
+            }
+          ]
+        },
+        {
+          "name": "GG",
+          "base": "G",
+          "sequence": "",
+          "is_template": false,
+          "children": [
+            {
+              "name": "AGG",
+              "base": "A",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "TGG",
+              "base": "T",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "GGG",
+              "base": "G",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "CGG",
+              "base": "C",
+              "sequence": "",
+              "is_template": false
+            }
+          ]
+        },
+        {
+          "name": "CG",
+          "base": "C",
+          "sequence": "",
+          "is_template": false,
+          "children": [
+            {
+              "name": "ACG",
+              "base": "A",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "TCG",
+              "base": "T",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "GCG",
+              "base": "G",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "CCG",
+              "base": "C",
+              "sequence": "",
+              "is_template": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "C",
+      "base": "C",
+      "sequence": "",
+      "is_template": false,
+      "children": [
+        {
+          "name": "AC",
+          "base": "A",
+          "sequence": "",
+          "is_template": false,
+          "children": [
+            {
+              "name": "AAC",
+              "base": "A",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "TAC",
+              "base": "T",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "GAC",
+              "base": "G",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "CAC",
+              "base": "C",
+              "sequence": "",
+              "is_template": false
+            }
+          ]
+        },
+        {
+          "name": "TC",
+          "base": "T",
+          "sequence": "",
+          "is_template": false,
+          "children": [
+            {
+              "name": "ATC",
+              "base": "A",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "TTC",
+              "base": "T",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "GTC",
+              "base": "G",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "CTC",
+              "base": "C",
+              "sequence": "",
+              "is_template": false
+            }
+          ]
+        },
+        {
+          "name": "GC",
+          "base": "G",
+          "sequence": "",
+          "is_template": false,
+          "children": [
+            {
+              "name": "AGC",
+              "base": "A",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "TGC",
+              "base": "T",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "GGC",
+              "base": "G",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "CGC",
+              "base": "C",
+              "sequence": "",
+              "is_template": false
+            }
+          ]
+        },
+        {
+          "name": "CC",
+          "base": "C",
+          "sequence": "",
+          "is_template": false,
+          "children": [
+            {
+              "name": "ACC",
+              "base": "A",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "TCC",
+              "base": "T",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "GCC",
+              "base": "G",
+              "sequence": "",
+              "is_template": false
+            },
+            {
+              "name": "CCC",
+              "base": "C",
+              "sequence": "",
+              "is_template": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

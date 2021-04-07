@@ -1,0 +1,8 @@
+#References
+reference_folder: refs
+mature_db_file: 
+hairpin_ref_file: hairpin_bta
+#Input variables
+min_length: 16
+max_length: 30
+

@@ -1,0 +1,6 @@
+channels:
+  - anaconda
+dependencies:
+  - progressbar2
+  - pip:
+    - anytree

@@ -1,0 +1,106 @@
+import os
+import pandas as pd
+
+configfile: 'config.yaml'
+
+samples = pd.read_table("samples.csv", header=0, sep=',', index_col=0)
+lengths = list(range(config['min_length'],config['max_length']+1))
+
+hairpin = os.path.join(config['reference_folder'],config['hairpin_ref_file'])
+mature = os.path.join(config['reference_folder'],config['mature_db_file'])
+
+rule all:
+	input: 	
+		'isomir_readcount.txt',
+		expand('data/{sample}_isomir_unmapped.fastq', sample=samples.index)
+
+
+rule isomir_fasta_generation:
+	input:
+		hairpin='{}.fa'.format(hairpin),
+		mature_db='{mature}.fa'
+	output:
+		'{mature}_isomir.fa'
+	conda:
+		'envs/iso_ref.yaml'
+	shell:
+		"""python src/create_isomir_ref.py -H {input.hairpin} -M {input.mature_db} -3T refs/3prime_template.json -5T refs/5prime_template.json  -OUT {output} -MOUT multireads.txt"""
+
+rule isomir_fasta_splitting:
+	input: temp('{mature}_isomir.fa')
+	output: expand('{{mature}}_isomir_{length}nt.txt', length=lengths)
+	shell:
+		"""awk -f  src/fasta_file_splitting.awk {input}"""
+
+
+def get_prefix(wildcards):
+	return('refs/bowtie_index_{}nt/{}_isomir'.format(wildcards.length,mature))
+
+rule isomir_alignment_index:
+	input:
+		file = '{mature}_isomir_{length}nt.txt',
+	output:
+		reference1='refs/bowtie_index_{length}nt/{mature}_isomir.1.ebwt',
+		reference2='refs/bowtie_index_{length}nt/{mature}_isomir.2.ebwt',
+		reference3='refs/bowtie_index_{length}nt/{mature}_isomir.3.ebwt',
+		reference4='refs/bowtie_index_{length}nt/{mature}_isomir.4.ebwt',
+		referencerev1='refs/bowtie_index_{length}nt/{mature}_isomir.rev.1.ebwt',
+		referencerev2='refs/bowtie_index_{length}nt/{mature}_isomir.rev.2.ebwt'
+	params:
+		prefix = lambda wildcards: get_prefix(wildcards)
+	conda:
+		'envs/bowtie.yaml'
+	shell:
+		"""bowtie-build -q {input} {params.prefix}"""
+
+rule fastq_splitting:
+	input:
+		'data/{sample}.fastq'
+	output:
+		temp(expand('data/{{sample}}_{length}nt.txt', length=lengths))
+	shell:
+		"""awk -f  src/fastq_file_splitting.awk {input}"""
+
+rule bowtie_alignment:
+	input: 
+		file='data/{sample}_{length}nt.txt',
+		reference1='refs/bowtie_index_{{length}}nt/{}_isomir.1.ebwt'.format(mature)
+	output: 
+		sam=temp('data/{sample}_isomir_{length}nt_alignment.sam'),
+		unmapped=temp('data/{sample}_isomir_{length}nt_unmapped.fastq')
+	params:
+		prefix = lambda wildcards: get_prefix(wildcards)
+	threads: 4
+	conda:
+		'envs/bowtie.yaml'
+	shell:
+		"""bowtie --quiet -p {threads} --sam --best --norc -v 3 --chunkmbs 1024 -m 1 {params.prefix}\
+		{input.file} --un {output.unmapped} > {output.sam}"""
+
+rule unmapped_fastq_merging:
+	input: expand('data/{{sample}}_isomir_{length}nt_unmapped.fastq', length=lengths)
+	output: 'data/{sample}_isomir_unmapped.fastq' 
+	shell:
+		"""cat {input} > {output}"""	
+
+rule sam_processing_length_merging:
+	input: expand('data/{{sample}}_isomir_{length}nt_alignment.sam',length=lengths)
+	output: temp('data/{sample}_isomir_reads.txt')
+	shell:
+		"""awk -f src/sam_processing_length_merging.awk {input} > {output}"""
+
+rule isomir_read_counting:
+	input: 'data/{sample}_isomir_reads.txt'
+	output: temp('data/{sample}_isomir_readcount.txt')
+	shell:
+		"""awk -f src/isomir_read_counting.awk {input} > {output}"""
+
+rule count_merging:
+	input: expand('data/{sample}_isomir_readcount.txt',sample=samples.index)
+	output: 'isomir_readcount.txt'
+	params: samples = lambda wildcards: samples.index
+	conda:
+		'envs/merge.yaml'
+	script:
+		"""src/count_merging.R"""
+
